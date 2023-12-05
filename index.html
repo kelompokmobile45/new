@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            background: black;
+            color: aqua;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .auto-typed {
+            font-weight: normal;
+            display: inline-block;
+            animation: changeColor 3s infinite; /* Change color every 3 seconds */
+        }
+
+        @keyframes changeColor {
+            0% { color: yellow; }
+            33.33% { color: lime; }
+            66.66% { color: magenta; }
+            100% { color: yellow; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>im <span class="auto-typed"></span></h1>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-typed", {
+            strings: ["NAMA BLABLABL", "KELAS BLABLABLA", "NIM BLABLABLA"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        });
+    </script>
+
+</body>
+</html>
